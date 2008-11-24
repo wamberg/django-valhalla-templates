@@ -6,14 +6,22 @@ YAHOO.util.Event.addListener(window, "load", function() {
         myDataSource.responseType = YAHOO.util.DataSource.TYPE_JSON;
         myDataSource.connXhrMode = "queueRequests";
         myDataSource.responseSchema = {resultsList: 'Results',
-				fields: ["fields.speaker"]};
+				fields: ["fields.speaker", "fields.text", "fields.deed_date"]};
 		myDataSource.doBeforeParseData = function (oRequest, oFullResponse, oCallback) {
 			oFullResponse = {"Results": oFullResponse };
 			return oFullResponse;
 		};
 
         var myColumnDefs = [
-            {key:"fields.speaker", label:"Speaker"}
+            {key:"fields.speaker",
+				label:"Speaker",
+				sortable:true},
+            {key:"fields.text",
+				label:"Text"},
+            {key:"fields.deed_date",
+				label:"Date and Time",
+				formatter: YAHOO.widget.DataTable.formatDate,
+				sortable:true}
         ];
 
         var myDataTable = new YAHOO.widget.DataTable("json", myColumnDefs,
