@@ -1,5 +1,3 @@
-ds = [{"pk": 1, "model": "valhalla.deed", "fields": {"create_date": "2008-11-20 21:00:15", "text": "i know dillbilly, i tried terminal too, it almost killed me", "deed_date": "2008-11-20 21:00:15", "speaker": "wustin", "user": 1, "witness": "wamberg"}}, {"pk": 2, "model": "valhalla.deed", "fields": {"create_date": "2008-11-20 21:00:43", "text": "they like, can't get it through their little ant brain that there's no food for them in my kitchen", "deed_date": "2008-11-20 21:00:43", "speaker": "dillbilly", "user": 1, "witness": "wustin"}}];
-
 YAHOO.util.Event.addListener(window, "load", function() {
     YAHOO.example.XHR_JSON = function() {
         var myDataSource = new YAHOO.util.DataSource('/valhalla/api/json/deeds/');
