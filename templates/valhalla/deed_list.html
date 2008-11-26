@@ -16,4 +16,11 @@
 {% block body %}
 <h1>Our deeds on Earth are echoed in the halls of Valhalla.</h1>
 <div id="json"></div>
+<form>
+	<p><label for="speaker">Speaker</label><input type="text" id="speaker" /></p>
+	<p><label for="text">Text</label><textarea id="text"></textarea></p>
+	<p><label for="date">Date and Time</label><input type="text" id="date" /></p>
+	<input type="button" value="Post" onClick="makeRequest();" />
+</form>
+<div id="post_status"></div>
 {% endblock body %}
