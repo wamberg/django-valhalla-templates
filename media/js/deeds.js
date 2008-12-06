@@ -71,9 +71,9 @@ deeds.post = function () {
 	return {
 		request: function () {
 			var purl = "/valhalla/api/json/deeds/";
-			var speaker = document.getElementById("speaker");
-			var text = document.getElementById("text");
-			var datetime = document.getElementById("date");
+			var speaker = document.getElementById("id_speaker");
+			var text = document.getElementById("id_text");
+			var datetime = document.getElementById("id_deed_date");
 			var newDeed = [
 				{"pk": 1, "model": "valhalla.deed", "fields": {
 					"create_date": "2008-11-24 21:22:45",
